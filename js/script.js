@@ -1,12 +1,13 @@
 // Projects data
 const projects = [
   {
-    title: "LoopChat",
-    img: "./assets/images/loopchat.png",
+    title: "Nova Acoustics",
+    img: "./assets/images/nova.png",
     year: "2026",
-    type: "Real-Time Chat App",
-    url: "https://loopchat-web.vercel.app/",
+    type: "E-commerce",
+    url: "https://nova-ui-system.vercel.app/",
   },
+
   {
     title: "Cineva",
     img: "./assets/images/cineva.png",
@@ -15,11 +16,11 @@ const projects = [
     url: "https://cineva-six.vercel.app/",
   },
   {
-    title: "Minimalist Home Retreat",
-    img: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw12.jpeg",
-    year: "2025",
-    type: "Interior",
-    url: "#",
+    title: "LoopChat",
+    img: "./assets/images/loopchat.png",
+    year: "2026",
+    type: "Real-Time Chat App",
+    url: "https://loopchat-web.vercel.app/",
   },
   {
     title: "Urban Concrete House",
