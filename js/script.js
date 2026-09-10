@@ -4,7 +4,7 @@ const projects = [
     title: "Nova Acoustics",
     img: "./assets/images/nova.png",
     year: "2026",
-    type: "E-commerce",
+    type: "Product Design",
     url: "https://nova-ui-system.vercel.app/",
   },
 
@@ -23,11 +23,11 @@ const projects = [
     url: "https://loopchat-web.vercel.app/",
   },
   {
-    title: "Urban Concrete House",
-    img: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/tiny-home/erik-mclean-g3U7sqtdJ1w-unsplash.jpg",
-    year: "2025",
-    type: "Product Design",
-    url: "#",
+    title: "Wanderly",
+    img: "./assets/images/wanderly.png",
+    year: "2026",
+    type: "Travel Platform",
+    url: "https://wanderly-travels-website.vercel.app/",
   },
 ];
 
