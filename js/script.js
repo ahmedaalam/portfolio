@@ -5,7 +5,7 @@ const projects = [
     img: "./assets/images/nova.png",
     year: "2026",
     type: "Product Design",
-    url: "https://nova-ui-system.vercel.app/",
+    url: "https://nova-product.vercel.app/",
   },
 
   {
