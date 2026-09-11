@@ -1,7 +1,7 @@
 // Projects data
 const projects = [
   {
-    title: "Nova Acoustics",
+    title: "Nova",
     img: "./assets/images/nova.png",
     year: "2026",
     type: "Product Design",
@@ -16,11 +16,11 @@ const projects = [
     url: "https://cineva-six.vercel.app/",
   },
   {
-    title: "LoopChat",
-    img: "./assets/images/loopchat.png",
+    title: "Clario",
+    img: "./assets/images/clario.png",
     year: "2026",
-    type: "Real-Time Chat App",
-    url: "https://loopchat-web.vercel.app/",
+    type: "SaaS Analytics Dashboard",
+    url: "https://clario-analytics-dashboard.vercel.app/",
   },
   {
     title: "Wanderly",
