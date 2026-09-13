@@ -1,35 +1,35 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const projects = [
   {
-    title: 'Nova',
-    img: '/assets/images/nova.png',
-    year: '2026',
-    type: 'Product Design',
-    url: 'https://nova-product.vercel.app/',
+    title: "Nova",
+    img: "/assets/images/nova.png",
+    year: "2026",
+    type: "Product Design",
+    url: "https://nova-product.vercel.app/",
   },
   {
-    title: 'Cineva',
-    img: '/assets/images/cineva.png',
-    year: '2025',
-    type: 'Movie Platform',
-    url: 'https://cineva-six.vercel.app/',
+    title: "Nexora",
+    img: "/assets/images/nexora.png",
+    year: "2025",
+    type: "Digital Agency",
+    url: "https://nexora-digital-ui.vercel.app/",
   },
   {
-    title: 'Clario',
-    img: '/assets/images/clario.png',
-    year: '2026',
-    type: 'SaaS Analytics Dashboard',
-    url: 'https://clario-analytics-dashboard.vercel.app/',
+    title: "Clario",
+    img: "/assets/images/clario.png",
+    year: "2026",
+    type: "SaaS Analytics Dashboard",
+    url: "https://clario-analytics-dashboard.vercel.app/",
   },
   {
-    title: 'Wanderly',
-    img: '/assets/images/wanderly.png',
-    year: '2026',
-    type: 'Travel Platform',
-    url: 'https://wanderly-travels-website.vercel.app/',
+    title: "Wanderly",
+    img: "/assets/images/wanderly.png",
+    year: "2026",
+    type: "Travel Platform",
+    url: "https://wanderly-travels-website.vercel.app/",
   },
 ];
 
@@ -38,18 +38,18 @@ export default function Projects() {
 
   useEffect(() => {
     if (!gridRef.current) return;
-    const cards = gridRef.current.querySelectorAll('.project-card');
+    const cards = gridRef.current.querySelectorAll(".project-card");
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            entry.target.classList.add("in-view");
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     cards.forEach((card) => observer.observe(card));
@@ -95,7 +95,7 @@ export default function Projects() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ textDecoration: 'none', color: 'inherit' }}
+                    style={{ textDecoration: "none", color: "inherit" }}
                   >
                     <p className="project-card-title">{project.title}</p>
                   </a>
