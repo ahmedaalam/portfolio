@@ -29,7 +29,7 @@ const projects = [
     img: "/assets/images/wanderly.png",
     year: "2026",
     type: "Travel Platform",
-    url: "https://wanderly-travels-website.vercel.app/",
+    url: "https://wanderly-travel-experience.vercel.app/",
   },
 ];
 
