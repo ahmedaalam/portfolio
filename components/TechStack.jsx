@@ -1,88 +1,20 @@
 const tools = [
-  {
-    name: 'HTML5',
-    category: 'Markup Language',
-    percent: '95%',
-    icon: '/assets/icons/html5.svg',
-  },
-  {
-    name: 'CSS3',
-    category: 'Stylesheet',
-    percent: '90%',
-    icon: '/assets/icons/css3.svg',
-  },
-  {
-    name: 'JavaScript',
-    category: 'Programming Language',
-    percent: '80%',
-    icon: '/assets/icons/javascript.svg',
-  },
-  {
-    name: 'React',
-    category: 'JavaScript Library',
-    percent: '85%',
-    icon: '/assets/icons/react.svg',
-  },
-  {
-    name: 'Next.js',
-    category: 'Full Stack Framework',
-    percent: '85%',
-    icon: '/assets/icons/nextjs.svg',
-  },
-  {
-    name: 'Tailwind CSS',
-    category: 'CSS Framework',
-    percent: '95%',
-    icon: '/assets/icons/tailwind.svg',
-  },
-  {
-    name: 'Node.js',
-    category: 'Runtime Environment',
-    percent: '88%',
-    icon: '/assets/icons/nodejs.svg',
-  },
-  {
-    name: 'Express.js',
-    category: 'Backend Framework',
-    percent: '75%',
-    icon: '/assets/icons/express.svg',
-  },
-  {
-    name: 'MongoDB',
-    category: 'NoSQL Database',
-    percent: '82%',
-    icon: '/assets/icons/mongodb.svg',
-  },
-  {
-    name: 'Figma',
-    category: 'UI/UX Design Tool',
-    percent: '85%',
-    icon: '/assets/icons/figma.svg',
-  },
-  {
-    name: 'Git',
-    category: 'Version Control',
-    percent: '90%',
-    icon: '/assets/icons/git.svg',
-  },
-  {
-    name: 'GitHub',
-    category: 'Code Repository',
-    percent: '95%',
-    icon: '/assets/icons/github.svg',
-  },
-  {
-    name: 'VS Code',
-    category: 'Code Editor',
-    percent: '92%',
-    icon: '/assets/icons/vscode.svg',
-  },
-  {
-    name: 'Postman',
-    category: 'API Platform',
-    percent: '88%',
-    icon: '/assets/icons/postman.svg',
-  },
+  { name: "React.js", icon: "/assets/icons/react.svg" },
+  { name: "JavaScript", icon: "/assets/icons/javascript.svg" },
+  { name: "TypeScript", icon: "/assets/icons/typescript.svg" },
+  { name: "Next.js", icon: "/assets/icons/nextjs.svg" },
+  { name: "Node.js", icon: "/assets/icons/nodejs.svg" },
+  { name: "Tailwind CSS", icon: "/assets/icons/tailwind.svg" },
+  { name: "MongoDB", icon: "/assets/icons/mongodb.svg" },
+  { name: "Express.js", icon: "/assets/icons/express.svg" },
+  { name: "HTML5", icon: "/assets/icons/html5.svg" },
+  { name: "CSS3", icon: "/assets/icons/css3.svg" },
+  { name: "Python", icon: "/assets/icons/python.svg" },
+  { name: "Git", icon: "/assets/icons/git.svg" },
+  { name: "GitHub", icon: "/assets/icons/github.svg" },
+  { name: "Figma", icon: "/assets/icons/figma.svg" },
+  { name: "VS Code", icon: "/assets/icons/vscode.svg" },
+  { name: "Postman", icon: "/assets/icons/postman.svg" },
 ];
 
 export default function TechStack() {
@@ -92,29 +24,25 @@ export default function TechStack() {
         <div className="stack-header">
           <span className="section-label">Tools</span>
           <h2 className="stack-title">Tech Stack</h2>
-          <p className="stack-subtitle">Technologies and tools I specialize in</p>
+          <p className="stack-subtitle">
+            Technologies and tools I specialize in
+          </p>
         </div>
 
-        <div className="stack-grid">
+        <div className="skill-grid">
           {tools.map((tool) => (
-            <div className="tool-card" key={tool.name}>
-              <div className="tool-left">
-                <span className="tool-icon">
-                  <img
-                    src={tool.icon}
-                    alt={`${tool.name} icon`}
-                    className="tool-icon-img"
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                  />
-                </span>
-                <div className="tool-text">
-                  <h3 className="tool-name">{tool.name}</h3>
-                  <p className="tool-category">{tool.category}</p>
-                </div>
+            <div className="skill-card" key={tool.name}>
+              <div className="skill-icon-wrap">
+                <img
+                  src={tool.icon}
+                  alt={`${tool.name} icon`}
+                  className="skill-icon-img"
+                  width="52"
+                  height="52"
+                  loading="lazy"
+                />
               </div>
-              <div className="tool-percent">{tool.percent}</div>
+              <span className="skill-name">{tool.name}</span>
             </div>
           ))}
         </div>
