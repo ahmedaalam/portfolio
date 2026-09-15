@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const tools = [
   { name: "React.js", icon: "/assets/icons/react.svg" },
   { name: "JavaScript", icon: "/assets/icons/javascript.svg" },
@@ -33,12 +35,12 @@ export default function TechStack() {
           {tools.map((tool) => (
             <div className="skill-card" key={tool.name}>
               <div className="skill-icon-wrap">
-                <img
+                <Image
                   src={tool.icon}
                   alt={`${tool.name} icon`}
                   className="skill-icon-img"
-                  width="52"
-                  height="52"
+                  width={52}
+                  height={52}
                   loading="lazy"
                 />
               </div>

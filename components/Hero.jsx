@@ -9,7 +9,7 @@ export default function Hero() {
           Full Stack Developer
         </h1>
         <p className="hero-description" id="heroCaption">
-          Crafting modern web experiences through clean code and
+          Crafting modern web experiences through clean code and{" "}
           <br className="hero-desc-br" />
           thoughtful design
         </p>

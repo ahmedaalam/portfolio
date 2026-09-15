@@ -1,32 +1,33 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const projects = [
   {
     title: "Nova",
-    img: "/assets/images/nova.png",
+    img: "/assets/images/nova.webp",
     year: "2026",
     type: "Product Design",
     url: "https://nova-product.vercel.app/",
   },
   {
     title: "Nexora",
-    img: "/assets/images/nexora.png",
+    img: "/assets/images/nexora.webp",
     year: "2025",
     type: "Digital Agency",
     url: "https://nexora-digital-ui.vercel.app/",
   },
   {
     title: "Clario",
-    img: "/assets/images/clario.png",
+    img: "/assets/images/clario.webp",
     year: "2026",
     type: "SaaS Analytics Dashboard",
     url: "https://clario-analytics-dashboard.vercel.app/",
   },
   {
     title: "Wanderly",
-    img: "/assets/images/wanderly.png",
+    img: "/assets/images/wanderly.webp",
     year: "2026",
     type: "Travel Platform",
     url: "https://wanderly-travel-experience.vercel.app/",
@@ -82,10 +83,12 @@ export default function Projects() {
                 className="project-card-link"
                 aria-label={project.title}
               >
-                <img
+                <Image
                   className="project-card-img"
                   src={project.img}
                   alt={project.title}
+                  width={800}
+                  height={500}
                   loading="lazy"
                 />
               </a>
