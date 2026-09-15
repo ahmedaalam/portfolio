@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 const projects = [
   {
@@ -83,12 +82,10 @@ export default function Projects() {
                 className="project-card-link"
                 aria-label={project.title}
               >
-                <Image
+                <img
                   className="project-card-img"
                   src={project.img}
                   alt={project.title}
-                  width={800}
-                  height={500}
                   loading="lazy"
                 />
               </a>
