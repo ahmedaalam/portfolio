@@ -3,12 +3,12 @@ export default function Hero() {
     <section className="hero-section" id="hero">
       <div className="hero-inner">
         <h1 className="hero-heading" id="heroHeading">
-          Creative Developer
+          Full Stack Developer
         </h1>
         <p className="hero-description" id="heroCaption">
-          Crafting beautiful digital experiences with code and
+          Crafting modern web experiences through clean code and
           <br className="hero-desc-br" />
-          creativity
+          thoughtful design
         </p>
 
         <div className="hero-cta-group">
@@ -30,7 +30,11 @@ export default function Hero() {
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
-          <a href="#contact" className="hero-cta-secondary" id="heroCTASecondary">
+          <a
+            href="#contact"
+            className="hero-cta-secondary"
+            id="heroCTASecondary"
+          >
             Get in Touch
           </a>
         </div>
