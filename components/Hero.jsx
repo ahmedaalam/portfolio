@@ -2,6 +2,9 @@ export default function Hero() {
   return (
     <section className="hero-section" id="hero">
       <div className="hero-inner">
+        <p className="hero-greeting" id="heroGreeting">
+          Hi, I&apos;m Ahmed
+        </p>
         <h1 className="hero-heading" id="heroHeading">
           Full Stack Developer
         </h1>
