@@ -9,14 +9,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Navbar shadow on scroll
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
 
-      // ScrollSpy
       const sections = ['hero', 'about', 'tools', 'projects', 'contact'];
       const scrollY = window.pageYOffset;
 
@@ -37,70 +31,39 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const links = [
+    { href: '#hero',     label: 'Home',     id: 'hero'     },
+    { href: '#about',    label: 'About',    id: 'about'    },
+    { href: '#projects', label: 'Projects', id: 'projects' },
+    { href: '#tools',    label: 'Skills',   id: 'tools'    },
+    { href: '#contact',  label: 'Contact',  id: 'contact'  },
+  ];
 
   return (
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <a href="#hero" className="nav-logo" aria-label="Ahmed Alam Homepage" onClick={closeMenu}>
-          <img
-            src="/assets/favicon.svg"
-            alt="Ahmed Alam Logo"
-            width="34"
-            height="34"
-            className="nav-logo-img"
-          />
+        <a href="#hero" className="nav-logo-text" aria-label="Portfolio Homepage" onClick={closeMenu} id="navLogo">
+          Portfolio
         </a>
 
         <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`} id="navMenu">
-          <li>
-            <a
-              href="#about"
-              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#tools"
-              className={`nav-link ${activeSection === 'tools' ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
-              Tech Stack
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
-              Contact
-            </a>
-          </li>
+          {links.map(({ href, label, id }) => (
+            <li key={id}>
+              <a
+                href={href}
+                className={`nav-link ${activeSection === id ? 'active' : ''}`}
+                onClick={closeMenu}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
 
         <div className="nav-actions">
-          <a href="#contact" className="nav-cta nav-cta-desktop" onClick={closeMenu}>
-            Let&apos;s Talk
-          </a>
           <button
             className="nav-toggle"
             id="navToggle"
@@ -110,14 +73,14 @@ export default function Navbar() {
           >
             {isMenuOpen ? (
               <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             ) : (
               <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
             )}
           </button>
