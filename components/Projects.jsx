@@ -60,7 +60,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="projects-section" id="projects">
+    <section className="projects-section" id="work">
       <div className="projects-inner">
         <div className="projects-header">
           <div>

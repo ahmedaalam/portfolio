@@ -21,7 +21,7 @@ const tools = [
 
 export default function TechStack() {
   return (
-    <section className="stack-section" id="tools">
+    <section className="stack-section" id="stack">
       <div className="stack-container">
         <div className="stack-header">
           <span className="section-label">Tools</span>
