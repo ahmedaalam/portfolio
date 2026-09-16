@@ -15,7 +15,7 @@ export default function Hero() {
         </p>
 
         <div className="hero-cta-group">
-          <a href="#projects" className="hero-cta" id="heroCTAPrimary">
+          <a href="#work" className="hero-cta" id="heroCTAPrimary">
             <span>View Projects</span>
             <svg
               className="hero-cta-icon"
